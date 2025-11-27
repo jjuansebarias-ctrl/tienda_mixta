@@ -1,0 +1,12 @@
+set -o pipefail; /usr/bin/mariadb-dump --user=_47dfcdba42003a7c --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _47dfcdba42003a7c | /usr/bin/gzip >> ./tienda-mixta-la-40/private/backups/20251120_223002-tienda-mixta-la-40-database.sql.gz
+
+Backup Summary for tienda-mixta-la-40 at 2025-11-20 22:30:03.442715
+Config  : ./tienda-mixta-la-40/private/backups/20251120_223002-tienda-mixta-la-40-site_config_backup.json 94.0B
+Database: ./tienda-mixta-la-40/private/backups/20251120_223002-tienda-mixta-la-40-database.sql.gz         230.4KiB
+Backup for Site tienda-mixta-la-40 has been successfully completed
+set -o pipefail; /usr/bin/mariadb-dump --user=_47dfcdba42003a7c --host=127.0.0.1 --port=3306 --password=********** --single-transaction --quick --lock-tables=false _47dfcdba42003a7c | /usr/bin/gzip >> ./tienda-mixta-la-40/private/backups/20251121_043002-tienda-mixta-la-40-database.sql.gz
+
+Backup Summary for tienda-mixta-la-40 at 2025-11-21 04:30:03.303523
+Config  : ./tienda-mixta-la-40/private/backups/20251121_043002-tienda-mixta-la-40-site_config_backup.json 94.0B
+Database: ./tienda-mixta-la-40/private/backups/20251121_043002-tienda-mixta-la-40-database.sql.gz         230.4KiB
+Backup for Site tienda-mixta-la-40 has been successfully completed

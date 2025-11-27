@@ -1,0 +1,13 @@
+{
+ "app_logo": "/assets/tienda_mixta/images/licores-la-40-logo.png",
+ "app_logo_url": "/assets/tienda_mixta/images/licores-la-40-logo.png",
+ "brand_logo": "/assets/tienda_mixta/images/licores-la-40-logo.png",
+ "db_name": "_47dfcdba42003a7c",
+ "db_password": "shRzV0BbMhpvqmgA",
+ "db_type": "mariadb",
+ "developer_mode": 1,
+ "favicon": "/assets/tienda_mixta/images/licores-la-40-logo.ico",
+ "user_type_doctype_limit": {
+  "employee_self_service": 40
+ }
+}

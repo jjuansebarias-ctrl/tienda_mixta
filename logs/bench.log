@@ -1,0 +1,74 @@
+2025-11-20 08:01:13,876 DEBUG cd mi-proyecto && python3 -m venv env
+2025-11-20 08:01:16,215 DEBUG cd mi-proyecto && /home/frappe/proyectos/mi-proyecto/env/bin/python -m pip install --quiet --upgrade pip
+2025-11-20 08:01:17,601 DEBUG cd mi-proyecto && /home/frappe/proyectos/mi-proyecto/env/bin/python -m pip install --quiet wheel
+2025-11-20 08:01:19,202 LOG Getting frappe
+2025-11-20 08:01:19,202 DEBUG cd mi-proyecto/apps && git clone https://github.com/frappe/frappe.git --branch version-15 --depth 1 --origin upstream
+2025-11-20 08:01:23,332 LOG Installing frappe
+2025-11-20 08:01:23,333 DEBUG cd /home/frappe/proyectos/mi-proyecto && /home/frappe/proyectos/mi-proyecto/env/bin/python -m pip install --quiet --upgrade -e /home/frappe/proyectos/mi-proyecto/apps/frappe 
+2025-11-20 08:02:26,408 DEBUG cd /home/frappe/proyectos/mi-proyecto/apps/frappe && yarn install --check-files
+2025-11-20 08:03:03,746 DEBUG cd mi-proyecto && bench build
+2025-11-20 08:03:03,841 INFO /usr/local/bin/bench build
+2025-11-20 08:03:18,817 LOG setting up backups
+2025-11-20 08:03:18,855 LOG backups were set up
+2025-11-20 08:03:18,855 INFO Bench mi-proyecto initialized
+2025-11-20 08:26:35,869 INFO /usr/local/bin/bench new-site tienda-mixta-la-40
+2025-11-20 08:32:31,244 INFO /usr/local/bin/bench get-app payments
+2025-11-20 08:32:31,832 LOG Getting payments
+2025-11-20 08:32:31,832 DEBUG cd ./apps && git clone https://github.com/frappe/payments.git  --depth 1 --origin upstream
+2025-11-20 08:32:32,815 LOG Installing payments
+2025-11-20 08:32:32,815 DEBUG cd /home/frappe/proyectos/mi-proyecto && /home/frappe/proyectos/mi-proyecto/env/bin/python -m pip install --quiet --upgrade -e /home/frappe/proyectos/mi-proyecto/apps/payments 
+2025-11-20 08:32:39,944 DEBUG bench build --app payments
+2025-11-20 08:32:40,034 INFO /usr/local/bin/bench build --app payments
+2025-11-20 08:33:32,361 INFO /usr/local/bin/bench get-app --branch version-15 erpnext
+2025-11-20 08:33:32,889 LOG Getting erpnext
+2025-11-20 08:33:32,889 DEBUG cd ./apps && git clone https://github.com/frappe/erpnext.git --branch version-15 --depth 1 --origin upstream
+2025-11-20 08:33:37,543 LOG Installing erpnext
+2025-11-20 08:33:37,543 DEBUG cd /home/frappe/proyectos/mi-proyecto && /home/frappe/proyectos/mi-proyecto/env/bin/python -m pip install --quiet --upgrade -e /home/frappe/proyectos/mi-proyecto/apps/erpnext 
+2025-11-20 08:33:51,001 DEBUG cd /home/frappe/proyectos/mi-proyecto/apps/erpnext && yarn install --check-files
+2025-11-20 08:33:51,871 DEBUG bench build --app erpnext
+2025-11-20 08:33:51,961 INFO /usr/local/bin/bench build --app erpnext
+2025-11-20 12:00:01,995 INFO /usr/local/bin/bench --verbose --site all backup
+2025-11-20 18:00:01,980 INFO /usr/local/bin/bench --verbose --site all backup
+2025-11-20 23:39:37,104 INFO /usr/local/bin/bench --site tienda-mixta-la-40 install-app erpnext
+2025-11-21 19:13:26,107 INFO /usr/local/bin/bench --site tienda-mixta-la-40 install-app erpnext
+2025-11-21 19:14:27,310 INFO /usr/local/bin/bench --site tienda-mixta-la-40 install-app payments
+2025-11-21 19:14:56,217 INFO /usr/local/bin/bench --site tienda-mixta-la-40 install-app hhrr
+2025-11-21 19:15:31,018 INFO /usr/local/bin/bench get-app hrms
+2025-11-21 19:15:31,555 LOG Getting hrms
+2025-11-21 19:15:31,556 DEBUG cd ./apps && git clone https://github.com/frappe/hrms.git  --depth 1 --origin upstream
+2025-11-21 19:15:33,558 LOG Installing hrms
+2025-11-21 19:15:33,558 DEBUG cd /home/frappe/proyectos/mi-proyecto && /home/frappe/proyectos/mi-proyecto/env/bin/python -m pip install --quiet --upgrade -e /home/frappe/proyectos/mi-proyecto/apps/hrms 
+2025-11-21 19:15:35,042 DEBUG cd /home/frappe/proyectos/mi-proyecto/apps/hrms && yarn install --check-files
+2025-11-21 19:16:54,048 DEBUG bench build --app hrms
+2025-11-21 19:16:54,146 INFO /usr/local/bin/bench build --app hrms
+2025-11-21 19:24:15,821 INFO /usr/local/bin/bench --site tienda-mixta-la-40 install-app hrms
+2025-11-21 19:24:59,344 INFO /usr/local/bin/bench --site tienda-mixta-la-40 install-app hrms
+2025-11-21 19:25:50,155 INFO /usr/local/bin/bench use tienda-mixta-la-40
+2025-11-21 19:26:33,385 INFO /usr/local/bin/bench start
+2025-11-21 19:26:33,629 INFO /usr/local/bin/bench watch
+2025-11-21 19:26:33,632 INFO /usr/local/bin/bench worker
+2025-11-21 19:26:33,632 INFO /usr/local/bin/bench schedule
+2025-11-21 19:26:33,636 INFO /usr/local/bin/bench serve --port 8000
+2025-11-21 19:35:11,196 INFO /usr/local/bin/bench --site tienda-mixta-la-40 install-app payments
+2025-11-21 19:41:14,025 INFO /usr/local/bin/bench start
+2025-11-21 19:41:14,226 INFO /usr/local/bin/bench watch
+2025-11-21 19:41:14,226 INFO /usr/local/bin/bench serve --port 8000
+2025-11-21 19:41:14,230 INFO /usr/local/bin/bench worker
+2025-11-21 19:41:14,230 INFO /usr/local/bin/bench schedule
+2025-11-21 19:49:16,781 INFO /usr/local/bin/bench start
+2025-11-21 19:49:16,983 INFO /usr/local/bin/bench serve --port 8000
+2025-11-21 19:49:16,983 INFO /usr/local/bin/bench worker
+2025-11-21 19:49:16,984 INFO /usr/local/bin/bench watch
+2025-11-21 19:49:16,985 INFO /usr/local/bin/bench schedule
+2025-11-21 20:41:13,235 INFO /usr/local/bin/bench new-app tienda_mixta
+2025-11-21 20:41:13,242 LOG creating new app tienda_mixta
+2025-11-21 20:46:31,179 LOG Installing tienda_mixta
+2025-11-21 20:46:31,180 DEBUG cd /home/frappe/proyectos/mi-proyecto && /home/frappe/proyectos/mi-proyecto/env/bin/python -m pip install --quiet --upgrade -e /home/frappe/proyectos/mi-proyecto/apps/tienda_mixta 
+2025-11-21 20:46:32,679 DEBUG bench build --app tienda_mixta
+2025-11-21 20:46:32,780 INFO /usr/local/bin/bench build --app tienda_mixta
+2025-11-21 20:46:48,385 INFO /usr/local/bin/bench start
+2025-11-21 20:46:48,580 INFO /usr/local/bin/bench serve --port 8000
+2025-11-21 20:46:48,581 INFO /usr/local/bin/bench watch
+2025-11-21 20:46:48,581 INFO /usr/local/bin/bench schedule
+2025-11-21 20:46:48,583 INFO /usr/local/bin/bench worker
+2025-11-21 20:47:02,992 INFO /usr/local/bin/bench --site tu_sitio install-app tienda_mixta
