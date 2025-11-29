@@ -1,0 +1,381 @@
+/* 
+ * Estilos específicos para la página de login
+ * Personalización completa del diseño de autenticación
+ */
+
+/* ===== LOGO PERSONALIZADO ===== */
+.login-logo img,
+.logo-section img,
+.page-card .app-logo {
+    content: url("/assets/tienda_mixta/images/licores-la-40-logo.png") !important;
+    max-height: 60px !important;
+    max-width: 200px !important;
+    width: auto !important;
+    height: auto !important;
+}
+
+/* ===== FONDO DE LA PÁGINA DE LOGIN ===== */
+body {
+    background: linear-gradient(135deg, #2c5530 0%, #1e3a21 50%, #2c5530 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+/* Patrón decorativo opcional */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: 
+        radial-gradient(circle at 25% 25%, rgba(212, 165, 116, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(212, 165, 116, 0.1) 0%, transparent 50%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ===== CONTENEDOR PRINCIPAL DE LOGIN ===== */
+.for-login,
+.for-forgot,
+.for-login-with-email-link,
+.for-signup,
+.for-email-login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== TARJETA DE LOGIN ===== */
+.login-content.page-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(212, 165, 116, 0.3);
+    border-radius: 20px;
+    box-shadow: 
+        0 20px 40px rgba(44, 85, 48, 0.3),
+        0 0 0 1px rgba(212, 165, 116, 0.2);
+    padding: 40px;
+    max-width: 450px;
+    width: 100%;
+    transform: translateY(0);
+    transition: all 0.3s ease;
+    animation: slideUp 0.6s ease-out;
+}
+
+.login-content.page-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 
+        0 25px 50px rgba(44, 85, 48, 0.4),
+        0 0 0 1px rgba(212, 165, 116, 0.3);
+}
+
+/* ===== ANIMACIÓN DE ENTRADA ===== */
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== HEADER CON LOGO ===== */
+.page-card-head {
+    text-align: center;
+    margin-bottom: 30px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgba(212, 165, 116, 0.2);
+}
+
+.app-logo {
+    max-height: 80px;
+    width: auto;
+    margin-bottom: 15px;
+    filter: drop-shadow(0 4px 8px rgba(44, 85, 48, 0.2));
+    transition: transform 0.3s ease;
+}
+
+.app-logo:hover {
+    transform: scale(1.05);
+}
+
+.page-card-head h4 {
+    color: #2c5530;
+    font-weight: 700;
+    font-size: 24px;
+    margin: 0;
+    letter-spacing: -0.5px;
+}
+
+/* ===== CAMPOS DE FORMULARIO ===== */
+.form-group {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.email-field,
+.password-field {
+    position: relative;
+}
+
+.form-control {
+    background: rgba(248, 249, 250, 0.8);
+    border: 2px solid rgba(44, 85, 48, 0.2);
+    border-radius: 12px;
+    padding: 15px 50px 15px 20px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #2c5530;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.form-control:focus {
+    background: rgba(255, 255, 255, 0.95);
+    border-color: #2c5530;
+    box-shadow: 
+        0 0 0 3px rgba(44, 85, 48, 0.1),
+        0 4px 12px rgba(44, 85, 48, 0.15);
+    outline: none;
+}
+
+.form-control::placeholder {
+    color: rgba(44, 85, 48, 0.6);
+    font-weight: 400;
+}
+
+/* ===== ICONOS EN CAMPOS ===== */
+.field-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(44, 85, 48, 0.6);
+    pointer-events: none;
+    transition: color 0.3s ease;
+}
+
+.form-control:focus + .field-icon {
+    color: #2c5530;
+}
+
+/* ===== BOTÓN DE MOSTRAR CONTRASEÑA ===== */
+.toggle-password {
+    position: absolute;
+    right: 45px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: #2c5530;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.toggle-password:hover {
+    background: rgba(44, 85, 48, 0.1);
+    color: #1e3a21;
+}
+
+/* ===== BOTONES DE ACCIÓN ===== */
+.page-card-actions {
+    margin-top: 30px;
+}
+
+.btn-login {
+    background: linear-gradient(135deg, #2c5530 0%, #4a7c59 100%);
+    border: none;
+    border-radius: 12px;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    width: 100%;
+    margin-bottom: 15px;
+    box-shadow: 
+        0 4px 15px rgba(44, 85, 48, 0.3),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-login::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn-login:hover {
+    background: linear-gradient(135deg, #1e3a21 0%, #2c5530 100%);
+    transform: translateY(-2px);
+    box-shadow: 
+        0 6px 20px rgba(44, 85, 48, 0.4),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.btn-login:hover::before {
+    left: 100%;
+}
+
+.btn-login:active {
+    transform: translateY(0);
+}
+
+/* ===== BOTONES DE LOGIN SOCIAL ===== */
+.social-login-buttons {
+    margin-top: 20px;
+}
+
+.btn-login-option {
+    background: rgba(248, 249, 250, 0.9);
+    border: 2px solid rgba(44, 85, 48, 0.2);
+    border-radius: 12px;
+    padding: 12px 20px;
+    color: #2c5530;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+}
+
+.btn-login-option:hover {
+    background: rgba(212, 165, 116, 0.1);
+    border-color: #d4a574;
+    color: #1e3a21;
+    transform: translateY(-1px);
+}
+
+/* ===== ENLACES Y TEXTO ===== */
+.forgot-password-message,
+.sign-up-message {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.forgot-password-message a,
+.sign-up-message a {
+    color: #2c5530;
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.forgot-password-message a::after,
+.sign-up-message a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: #d4a574;
+    transition: width 0.3s ease;
+}
+
+.forgot-password-message a:hover::after,
+.sign-up-message a:hover::after {
+    width: 100%;
+}
+
+.forgot-password-message a:hover,
+.sign-up-message a:hover {
+    color: #1e3a21;
+}
+
+/* ===== DIVIDER ===== */
+.login-divider {
+    position: relative;
+    text-align: center;
+    margin: 25px 0;
+    color: rgba(44, 85, 48, 0.6);
+    font-weight: 500;
+}
+
+.login-divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: rgba(44, 85, 48, 0.2);
+    z-index: 1;
+}
+
+.login-divider::after {
+    content: attr(data-text);
+    background: rgba(255, 255, 255, 0.95);
+    padding: 0 15px;
+    position: relative;
+    z-index: 2;
+}
+
+/* ===== ESTADOS DE ERROR ===== */
+.page-card.invalid-login {
+    animation: shake 0.5s ease-in-out;
+    border-color: #dc3545;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    .login-content.page-card {
+        margin: 10px;
+        padding: 30px 20px;
+        border-radius: 16px;
+    }
+    
+    .page-card-head h4 {
+        font-size: 20px;
+    }
+    
+    .form-control {
+        padding: 12px 45px 12px 15px;
+        font-size: 14px;
+    }
+    
+    .btn-login {
+        padding: 12px 25px;
+        font-size: 15px;
+    }
+}
+
+/* ===== TEMA OSCURO (OPCIONAL) ===== */
+[data-theme="dark"] .login-content.page-card {
+    background: rgba(30, 30, 30, 0.95);
+    border-color: rgba(212, 165, 116, 0.4);
+    color: #e9ecef;
+}
+
+[data-theme="dark"] .form-control {
+    background: rgba(40, 40, 40, 0.8);
+    color: #e9ecef;
+    border-color: rgba(212, 165, 116, 0.3);
+}
+
+[data-theme="dark"] .form-control::placeholder {
+    color: rgba(233, 236, 239, 0.6);
+}

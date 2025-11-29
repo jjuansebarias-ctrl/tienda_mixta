@@ -5,6 +5,24 @@ app_description = "Este proyecto corresponde a una instancia personalizada de ER
 app_email = "jjuansebarias@gmail.com"
 app_license = "mit"
 
+# Logo personalizado
+app_logo_url = "/assets/tienda_mixta/images/licores-la-40-logo.png"
+brand_logo = "/assets/tienda_mixta/images/licores-la-40-logo.png"
+app_logo = "/assets/tienda_mixta/images/licores-la-40-logo.png"
+favicon = "/assets/tienda_mixta/images/licores-la-40-logo.png"
+
+# Website context for login pages and favicon
+website_context = {
+    "brand_logo": "/assets/tienda_mixta/images/licores-la-40-logo.png",
+    "favicon": "/assets/tienda_mixta/images/licores-la-40-logo.png",
+    "logo": "/assets/tienda_mixta/images/licores-la-40-logo.png"
+}
+
+# Override template for complete logo control
+website_context_processors = [
+    "tienda_mixta.utils.get_website_context"
+]
+
 # Apps
 # ------------------
 
@@ -25,11 +43,20 @@ app_license = "mit"
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/tienda_mixta/css/tienda_mixta.css"
+app_include_css = [
+	"/assets/tienda_mixta/css/fonts.css",
+	"/assets/tienda_mixta/css/custom.css",
+	"/assets/tienda_mixta/css/assets.css"
+]
 # app_include_js = "/assets/tienda_mixta/js/tienda_mixta.js"
 
 # include js, css files in header of web template
-# web_include_css = "/assets/tienda_mixta/css/tienda_mixta.css"
+web_include_css = [
+	"/assets/tienda_mixta/css/fonts.css",
+	"/assets/tienda_mixta/css/custom.css",
+	"/assets/tienda_mixta/css/assets.css",
+	"/assets/tienda_mixta/css/login.css"
+]
 # web_include_js = "/assets/tienda_mixta/js/tienda_mixta.js"
 
 # include custom scss in every website theme (without file extension ".scss")

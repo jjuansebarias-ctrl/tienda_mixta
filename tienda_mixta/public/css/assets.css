@@ -1,0 +1,160 @@
+/**
+ * Configuración de logos y assets personalizados
+ * Para Tienda Mixta La 40
+ */
+
+/* ===== CONFIGURACIÓN DE LOGOS ===== */
+.app-logo {
+    /* Logo principal - Licores La 40 */
+    content: url('/assets/tienda_mixta/images/licores-la-40-logo.png');
+    max-height: 60px;
+    width: auto;
+}
+
+/* Logo del navbar */
+.navbar-brand img,
+.navbar-brand .app-logo {
+    max-height: 40px;
+    width: auto;
+    filter: brightness(0) invert(1); /* Hace el logo blanco para navbar oscuro */
+}
+
+/* Logo del login */
+.login-content .app-logo {
+    max-height: 80px;
+    width: auto;
+    filter: none; /* Logo original para fondo claro */
+}
+
+/* Logo del favicon - se configura en el archivo HTML */
+/* link[rel="shortcut icon"], link[rel="icon"] configurados via template */
+
+/* ===== ICONOS PERSONALIZADOS ===== */
+.tienda-icon {
+    width: 24px;
+    height: 24px;
+    fill: var(--tienda-primary);
+}
+
+.tienda-icon-sm {
+    width: 16px;
+    height: 16px;
+}
+
+.tienda-icon-lg {
+    width: 32px;
+    height: 32px;
+}
+
+.tienda-icon-xl {
+    width: 48px;
+    height: 48px;
+}
+
+/* ===== PATRONES DE FONDO ===== */
+.tienda-pattern-bg {
+    background-image: 
+        repeating-linear-gradient(
+            45deg,
+            rgba(212, 165, 116, 0.05) 0,
+            rgba(212, 165, 116, 0.05) 10px,
+            transparent 10px,
+            transparent 20px
+        );
+}
+
+/* ===== IMÁGENES DE PLACEHOLDER ===== */
+.tienda-placeholder-img {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--tienda-primary);
+    font-size: 48px;
+    border-radius: 8px;
+}
+
+/* ===== CONFIGURACIÓN RESPONSIVE DE LOGOS ===== */
+@media (max-width: 768px) {
+    .app-logo {
+        max-height: 50px;
+    }
+    
+    .navbar-brand img,
+    .navbar-brand .app-logo {
+        max-height: 35px;
+    }
+    
+    .login-content .app-logo {
+        max-height: 70px;
+    }
+}
+
+@media (max-width: 480px) {
+    .app-logo {
+        max-height: 40px;
+    }
+    
+    .navbar-brand img,
+    .navbar-brand .app-logo {
+        max-height: 30px;
+    }
+    
+    .login-content .app-logo {
+        max-height: 60px;
+    }
+}
+
+/* ===== EFECTOS HOVER PARA LOGOS ===== */
+.navbar-brand:hover .app-logo {
+    transform: scale(1.05);
+    transition: transform 0.3s ease;
+}
+
+.login-content .app-logo:hover {
+    transform: scale(1.1) rotate(2deg);
+    transition: transform 0.3s ease;
+}
+
+/* ===== CONFIGURACIONES DE CALIDAD DE IMAGEN ===== */
+img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+.app-logo,
+.navbar-brand img {
+    image-rendering: auto;
+    image-rendering: smooth;
+}
+
+/* ===== LAZY LOADING PLACEHOLDER ===== */
+img[loading="lazy"] {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* ===== NAVBAR LOGO CUSTOMIZATION ===== */
+.navbar-brand img,
+.navbar .app-logo,
+.logo img {
+    content: url('/assets/tienda_mixta/images/licores-la-40-logo.png');
+    max-height: 40px !important;
+    width: auto !important;
+    object-fit: contain;
+}
+
+/* Logo en el login */
+.login-logo img,
+.login-content img[src*="frappe-framework-logo"] {
+    content: url('/assets/tienda_mixta/images/licores-la-40-logo.png');
+    max-height: 80px !important;
+    width: auto !important;
+    object-fit: contain;
+}

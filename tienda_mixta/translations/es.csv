@@ -1,0 +1,150 @@
+# Traducciones corregidas para Tienda Mixta La 40
+# Este archivo corrige traducciones problemáticas del sistema
+
+# Corrección de UOM (Unit of Measure) - debe ser UdM en español
+UOM,UdM,
+
+# Correcciones de términos de inventario
+Include UOM,Incluir UdM,
+Lab Test UOM,UdM de Prueba de Laboratorio,
+Stock UOM,UdM de Inventario,
+
+# Correcciones de formularios
+Item Code,Código del Artículo,
+Item Name,Nombre del Artículo,
+Customer,Cliente,
+Customer Name,Nombre del Cliente,
+Supplier,Proveedor,
+Supplier Name,Nombre del Proveedor,
+Employee,Empleado,
+Employee Name,Nombre del Empleado,
+Company,Empresa,
+Company Name,Nombre de la Empresa,
+Account,Cuenta,
+Account Name,Nombre de la Cuenta,
+
+# Términos de medidas y unidades mejorados
+Unit of Measure,Unidad de Medida,
+Units of Measure,Unidades de Medida,
+Conversion Factor,Factor de Conversión,
+Base Unit,Unidad Base,
+Default Unit,Unidad Predeterminada,
+
+# Términos comerciales mejorados
+Sales Invoice,Factura de Venta,
+Purchase Invoice,Factura de Compra,
+Sales Order,Orden de Venta,
+Purchase Order,Orden de Compra,
+Quotation,Cotización,
+Delivery Note,Nota de Entrega,
+Purchase Receipt,Recibo de Compra,
+
+# Términos de inventario
+Stock Entry,Entrada de Inventario,
+Stock Ledger,Libro Mayor de Inventario,
+Warehouse,Almacén,
+Bin,Ubicación,
+Stock Balance,Saldo de Inventario,
+Stock Movement,Movimiento de Inventario,
+
+# Términos financieros
+General Ledger,Libro Mayor General,
+Chart of Accounts,Plan de Cuentas,
+Account Balance,Saldo de Cuenta,
+Payment Entry,Entrada de Pago,
+Journal Entry,Asiento de Diario,
+
+# Términos de punto de venta
+POS Profile,Perfil de Punto de Venta,
+POS Invoice,Factura PdV,
+Cash Register,Caja Registradora,
+Point of Sale,Punto de Venta,
+
+# Términos de configuración
+Company Settings,Configuración de la Empresa,
+System Settings,Configuración del Sistema,
+User Settings,Configuración del Usuario,
+Print Settings,Configuración de Impresión,
+
+# Correcciones específicas de validación
+"Default Unit of Measure for Item {0} cannot be changed directly because you have already made some transaction(s) with another UOM. You will need to create a new Item to use a different Default UOM.","La Unidad de Medida predeterminada para el Artículo {0} no se puede cambiar directamente porque ya ha realizado alguna transacción con otra UdM. Necesitará crear un nuevo Artículo para usar una UdM predeterminada diferente.",
+
+"Different UOM for items will lead to incorrect (Total) Net Weight value. Make sure that Net Weight of each item is in the same UOM.","Diferentes UdM para artículos resultará en un valor incorrecto de Peso Neto (Total). Asegúrese de que el Peso Neto de cada artículo esté en la misma UdM.",
+
+"UOM coversion factor required for UOM: {0} in Item: {1}","Factor de conversión de UdM requerido para la UdM: {0} en el Artículo: {1}",
+
+"Item Price appears multiple times based on Price List, Supplier/Customer, Currency, Item, UOM, Qty and Dates.","El Precio del Artículo aparece múltiples veces basado en Lista de Precios, Proveedor/Cliente, Moneda, Artículo, UdM, Cantidad y Fechas.",
+
+"UOM Conversion factor is required in row {0}","El factor de conversión de UdM es requerido en la fila {0}",
+
+"UOM Conversion Factor is mandatory","El Factor de Conversión de UdM es obligatorio",
+
+# Términos de informes
+Importing Items and UOMs,Importando Artículos y UdM,
+Processing Items and UOMs,Procesando Artículos y UdM,
+
+# Login y acceso
+Login,Iniciar Sesión,
+Username,Nombre de Usuario,
+Password,Contraseña,
+Remember Me,Recordarme,
+Forgot Password,Olvidé la Contraseña,
+Sign Up,Registrarse,
+Log out,Cerrar Sesión,
+
+# Navegación y menús
+Home,Inicio,
+Dashboard,Panel de Control,
+Reports,Informes,
+Settings,Configuración,
+Tools,Herramientas,
+Help,Ayuda,
+Search,Buscar,
+
+# Acciones comunes
+Save,Guardar,
+Cancel,Cancelar,
+Submit,Enviar,
+Create,Crear,
+Update,Actualizar,
+Delete,Eliminar,
+Edit,Editar,
+View,Ver,
+Print,Imprimir,
+Email,Correo Electrónico,
+Export,Exportar,
+Import,Importar,
+
+# Estados
+Draft,Borrador,
+Submitted,Enviado,
+Cancelled,Cancelado,
+Approved,Aprobado,
+Rejected,Rechazado,
+Pending,Pendiente,
+Completed,Completado,
+Active,Activo,
+Inactive,Inactivo,
+
+# Fechas y tiempo
+Date,Fecha,
+Time,Hora,
+Today,Hoy,
+Yesterday,Ayer,
+Tomorrow,Mañana,
+This Week,Esta Semana,
+This Month,Este Mes,
+This Year,Este Año,
+From Date,Fecha Desde,
+To Date,Fecha Hasta,
+
+# Campos comunes de formulario
+Name,Nombre,
+Description,Descripción,
+Reference,Referencia,
+Remarks,Observaciones,
+Notes,Notas,
+Status,Estado,
+Type,Tipo,
+Category,Categoría,
+Group,Grupo,

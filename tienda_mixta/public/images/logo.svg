@@ -1,0 +1,52 @@
+<!-- Logo SVG de ejemplo para Tienda Mixta La 40 -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 80" style="background: transparent;">
+  <!-- Fondo con gradiente -->
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2c5530;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4a7c59;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="accentGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#d4a574;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b8924f;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Contenedor principal -->
+  <rect width="200" height="80" fill="url(#logoGradient)" rx="8"/>
+  
+  <!-- Línea decorativa superior -->
+  <rect x="0" y="0" width="200" height="3" fill="url(#accentGradient)"/>
+  
+  <!-- Icono de la tienda -->
+  <g transform="translate(15, 15)">
+    <!-- Casa/tienda -->
+    <polygon points="10,5 20,15 25,15 25,35 -5,35 -5,15 0,15" fill="#ffffff" opacity="0.9"/>
+    <!-- Techo -->
+    <polygon points="10,5 25,15 -5,15" fill="#d4a574"/>
+    <!-- Puerta -->
+    <rect x="5" y="20" width="10" height="15" fill="#2c5530"/>
+    <!-- Ventana -->
+    <rect x="17" y="22" width="6" height="6" fill="#2c5530"/>
+  </g>
+  
+  <!-- Texto del logo -->
+  <text x="50" y="30" font-family="Inter, sans-serif" font-size="16" font-weight="700" fill="#ffffff">
+    Tienda Mixta
+  </text>
+  <text x="50" y="48" font-family="Inter, sans-serif" font-size="12" font-weight="500" fill="#d4a574">
+    La 40
+  </text>
+  
+  <!-- Línea decorativa -->
+  <line x1="50" y1="52" x2="140" y2="52" stroke="#d4a574" stroke-width="2"/>
+  
+  <!-- Pequeño detalle decorativo -->
+  <circle cx="175" cy="25" r="8" fill="#d4a574" opacity="0.8"/>
+  <circle cx="175" cy="25" r="4" fill="#ffffff"/>
+  
+  <!-- Texto adicional pequeño -->
+  <text x="50" y="65" font-family="Inter, sans-serif" font-size="9" font-weight="400" fill="#d4a574">
+    Licores & Más
+  </text>
+</svg>

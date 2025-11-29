@@ -1,0 +1,277 @@
+/**
+ * Fuentes personalizadas para Tienda Mixta La 40
+ * Configuración e importación de tipografías
+ */
+
+/* ===== IMPORTAR GOOGLE FONTS ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* ===== CONFIGURACIÓN DE FUENTES ===== */
+:root {
+    /* Fuente principal del sistema */
+    --tienda-font-primary: 'Inter', 'Segoe UI', -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    
+    /* Fuente para títulos y encabezados */
+    --tienda-font-heading: 'Poppins', 'Inter', sans-serif;
+    
+    /* Fuente monospace para código */
+    --tienda-font-mono: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+    
+    /* Tamaños de fuente */
+    --tienda-font-size-xs: 0.75rem;     /* 12px */
+    --tienda-font-size-sm: 0.875rem;    /* 14px */
+    --tienda-font-size-base: 1rem;      /* 16px */
+    --tienda-font-size-lg: 1.125rem;    /* 18px */
+    --tienda-font-size-xl: 1.25rem;     /* 20px */
+    --tienda-font-size-2xl: 1.5rem;     /* 24px */
+    --tienda-font-size-3xl: 1.875rem;   /* 30px */
+    --tienda-font-size-4xl: 2.25rem;    /* 36px */
+    
+    /* Pesos de fuente */
+    --tienda-font-weight-light: 300;
+    --tienda-font-weight-normal: 400;
+    --tienda-font-weight-medium: 500;
+    --tienda-font-weight-semibold: 600;
+    --tienda-font-weight-bold: 700;
+    --tienda-font-weight-extrabold: 800;
+    --tienda-font-weight-black: 900;
+    
+    /* Altura de línea */
+    --tienda-line-height-tight: 1.25;
+    --tienda-line-height-snug: 1.375;
+    --tienda-line-height-normal: 1.5;
+    --tienda-line-height-relaxed: 1.625;
+    --tienda-line-height-loose: 2;
+}
+
+/* ===== APLICAR FUENTES GLOBALMENTE ===== */
+* {
+    font-family: var(--tienda-font-primary);
+}
+
+body {
+    font-family: var(--tienda-font-primary);
+    font-size: var(--tienda-font-size-base);
+    font-weight: var(--tienda-font-weight-normal);
+    line-height: var(--tienda-line-height-normal);
+    letter-spacing: -0.01em;
+}
+
+/* ===== ENCABEZADOS ===== */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--tienda-font-heading);
+    font-weight: var(--tienda-font-weight-semibold);
+    line-height: var(--tienda-line-height-tight);
+    letter-spacing: -0.025em;
+    margin-bottom: 0.5em;
+    color: var(--tienda-primary-dark, #1e3a21);
+}
+
+h1 {
+    font-size: var(--tienda-font-size-4xl);
+    font-weight: var(--tienda-font-weight-bold);
+}
+
+h2 {
+    font-size: var(--tienda-font-size-3xl);
+    font-weight: var(--tienda-font-weight-bold);
+}
+
+h3 {
+    font-size: var(--tienda-font-size-2xl);
+    font-weight: var(--tienda-font-weight-semibold);
+}
+
+h4 {
+    font-size: var(--tienda-font-size-xl);
+    font-weight: var(--tienda-font-weight-semibold);
+}
+
+h5 {
+    font-size: var(--tienda-font-size-lg);
+    font-weight: var(--tienda-font-weight-medium);
+}
+
+h6 {
+    font-size: var(--tienda-font-size-base);
+    font-weight: var(--tienda-font-weight-medium);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* ===== PÁRRAFOS Y TEXTO ===== */
+p {
+    font-size: var(--tienda-font-size-base);
+    line-height: var(--tienda-line-height-relaxed);
+    margin-bottom: 1em;
+}
+
+.lead {
+    font-size: var(--tienda-font-size-lg);
+    font-weight: var(--tienda-font-weight-normal);
+    line-height: var(--tienda-line-height-relaxed);
+}
+
+.small, small {
+    font-size: var(--tienda-font-size-sm);
+}
+
+.text-xs {
+    font-size: var(--tienda-font-size-xs);
+}
+
+/* ===== ELEMENTOS DE INTERFAZ ===== */
+.btn {
+    font-family: var(--tienda-font-primary);
+    font-weight: var(--tienda-font-weight-medium);
+    letter-spacing: 0.025em;
+}
+
+.form-label {
+    font-weight: var(--tienda-font-weight-medium);
+    font-size: var(--tienda-font-size-sm);
+    color: var(--tienda-primary-dark, #1e3a21);
+}
+
+.form-control {
+    font-family: var(--tienda-font-primary);
+    font-size: var(--tienda-font-size-base);
+    font-weight: var(--tienda-font-weight-normal);
+}
+
+/* ===== NAVEGACIÓN ===== */
+.navbar-brand {
+    font-family: var(--tienda-font-heading);
+    font-weight: var(--tienda-font-weight-bold);
+    font-size: var(--tienda-font-size-xl);
+    letter-spacing: -0.02em;
+}
+
+.nav-link {
+    font-weight: var(--tienda-font-weight-medium);
+    letter-spacing: 0.01em;
+}
+
+/* ===== SIDEBAR Y MENÚS ===== */
+.sidebar .nav-link {
+    font-size: var(--tienda-font-size-sm);
+    font-weight: var(--tienda-font-weight-medium);
+}
+
+.dropdown-item {
+    font-size: var(--tienda-font-size-sm);
+}
+
+/* ===== TABLAS ===== */
+.table th {
+    font-weight: var(--tienda-font-weight-semibold);
+    font-size: var(--tienda-font-size-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.table td {
+    font-size: var(--tienda-font-size-sm);
+}
+
+/* ===== MODALES Y ALERTAS ===== */
+.modal-title {
+    font-family: var(--tienda-font-heading);
+    font-weight: var(--tienda-font-weight-semibold);
+}
+
+.alert {
+    font-size: var(--tienda-font-size-sm);
+    font-weight: var(--tienda-font-weight-normal);
+}
+
+/* ===== CÓDIGO Y TEXTO MONOSPACE ===== */
+code, pre, .code {
+    font-family: var(--tienda-font-mono);
+    font-size: 0.875em;
+}
+
+/* ===== RESPONSIVE TYPOGRAPHY ===== */
+@media (max-width: 768px) {
+    :root {
+        --tienda-font-size-4xl: 2rem;       /* 32px */
+        --tienda-font-size-3xl: 1.75rem;    /* 28px */
+        --tienda-font-size-2xl: 1.375rem;   /* 22px */
+    }
+    
+    body {
+        font-size: var(--tienda-font-size-sm);
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        --tienda-font-size-4xl: 1.75rem;    /* 28px */
+        --tienda-font-size-3xl: 1.5rem;     /* 24px */
+        --tienda-font-size-2xl: 1.25rem;    /* 20px */
+    }
+}
+
+/* ===== OPTIMIZACIONES DE RENDIMIENTO ===== */
+@media (prefers-reduced-motion: no-preference) {
+    * {
+        font-feature-settings: 'kern' 1, 'liga' 1, 'frac' 1, 'cv01' 1, 'cv03' 1, 'cv04' 1, 'cv09' 1;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+}
+
+/* ===== CLASES UTILITARIAS PARA TIPOGRAFÍA ===== */
+.font-heading {
+    font-family: var(--tienda-font-heading);
+}
+
+.font-mono {
+    font-family: var(--tienda-font-mono);
+}
+
+.font-light {
+    font-weight: var(--tienda-font-weight-light);
+}
+
+.font-normal {
+    font-weight: var(--tienda-font-weight-normal);
+}
+
+.font-medium {
+    font-weight: var(--tienda-font-weight-medium);
+}
+
+.font-semibold {
+    font-weight: var(--tienda-font-weight-semibold);
+}
+
+.font-bold {
+    font-weight: var(--tienda-font-weight-bold);
+}
+
+.leading-tight {
+    line-height: var(--tienda-line-height-tight);
+}
+
+.leading-normal {
+    line-height: var(--tienda-line-height-normal);
+}
+
+.leading-relaxed {
+    line-height: var(--tienda-line-height-relaxed);
+}
+
+.tracking-tight {
+    letter-spacing: -0.025em;
+}
+
+.tracking-normal {
+    letter-spacing: 0;
+}
+
+.tracking-wide {
+    letter-spacing: 0.025em;
+}

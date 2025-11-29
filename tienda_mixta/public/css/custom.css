@@ -1,0 +1,227 @@
+/* 
+ * Estilos personalizados para Tienda Mixta La 40
+ * Personalización de colores, fuentes y formas
+ */
+
+/* ===== VARIABLES PERSONALIZADAS ===== */
+:root {
+    /* Colores primarios de la marca */
+    --tienda-primary: #2c5530;        /* Verde bosque para navegación */
+    --tienda-primary-light: #4a7c59;  /* Verde más claro */
+    --tienda-primary-dark: #1e3a21;   /* Verde más oscuro */
+    
+    /* Colores secundarios */
+    --tienda-secondary: #d4a574;      /* Dorado/beige para acentos */
+    --tienda-secondary-light: #e6c299; /* Dorado claro */
+    --tienda-secondary-dark: #b8924f;  /* Dorado oscuro */
+    
+    /* Colores de estado personalizados */
+    --tienda-success: #28a745;
+    --tienda-warning: #ffc107;
+    --tienda-danger: #dc3545;
+    --tienda-info: #17a2b8;
+    
+    /* Tipografía */
+    --tienda-font-family: 'Inter', 'Segoe UI', system-ui, sans-serif;
+    --tienda-font-family-heading: 'Inter', 'Segoe UI', system-ui, sans-serif;
+    
+    /* Bordes y formas */
+    --tienda-border-radius: 8px;
+    --tienda-border-radius-lg: 12px;
+    --tienda-border-radius-xl: 16px;
+    
+    /* Sombras */
+    --tienda-shadow: 0 2px 4px rgba(44, 85, 48, 0.1);
+    --tienda-shadow-md: 0 4px 6px rgba(44, 85, 48, 0.15);
+    --tienda-shadow-lg: 0 10px 15px rgba(44, 85, 48, 0.2);
+}
+
+/* ===== SOBRESCRIBIR VARIABLES DE FRAPPE ===== */
+:root,
+[data-theme="light"] {
+    /* Colores principales del sistema */
+    --primary: var(--tienda-primary);
+    --primary-light: var(--tienda-primary-light);
+    --primary-dark: var(--tienda-primary-dark);
+    
+    /* Colores secundarios */
+    --secondary: var(--tienda-secondary);
+    
+    /* Bordes */
+    --border-radius: var(--tienda-border-radius);
+    --border-radius-md: var(--tienda-border-radius);
+    --border-radius-lg: var(--tienda-border-radius-lg);
+    
+    /* Sombras */
+    --shadow-sm: var(--tienda-shadow);
+    --shadow-md: var(--tienda-shadow-md);
+    --shadow-lg: var(--tienda-shadow-lg);
+}
+
+/* ===== TIPOGRAFÍA PERSONALIZADA ===== */
+body {
+    font-family: var(--tienda-font-family) !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--tienda-font-family-heading) !important;
+    font-weight: 600;
+}
+
+/* ===== PERSONALIZACIÓN DEL NAVBAR ===== */
+.navbar {
+    background: linear-gradient(135deg, var(--tienda-primary) 0%, var(--tienda-primary-dark) 100%);
+    box-shadow: var(--tienda-shadow-md);
+    border-bottom: 2px solid var(--tienda-secondary);
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link {
+    color: white !important;
+    font-weight: 500;
+}
+
+.navbar .nav-link:hover {
+    color: var(--tienda-secondary-light) !important;
+    transition: color 0.3s ease;
+}
+
+/* ===== PERSONALIZACIÓN DE BOTONES ===== */
+.btn-primary {
+    background: linear-gradient(135deg, var(--tienda-primary) 0%, var(--tienda-primary-light) 100%);
+    border-color: var(--tienda-primary);
+    border-radius: var(--tienda-border-radius);
+    font-weight: 500;
+    box-shadow: var(--tienda-shadow);
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, var(--tienda-primary-dark) 0%, var(--tienda-primary) 100%);
+    border-color: var(--tienda-primary-dark);
+    transform: translateY(-1px);
+    box-shadow: var(--tienda-shadow-md);
+}
+
+.btn-secondary {
+    background: var(--tienda-secondary);
+    border-color: var(--tienda-secondary);
+    color: var(--tienda-primary-dark);
+    border-radius: var(--tienda-border-radius);
+    font-weight: 500;
+}
+
+.btn-secondary:hover {
+    background: var(--tienda-secondary-dark);
+    border-color: var(--tienda-secondary-dark);
+    color: white;
+}
+
+/* ===== PERSONALIZACIÓN DE TARJETAS ===== */
+.card,
+.page-card {
+    border-radius: var(--tienda-border-radius-lg);
+    box-shadow: var(--tienda-shadow-md);
+    border: 1px solid rgba(44, 85, 48, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover,
+.page-card:hover {
+    box-shadow: var(--tienda-shadow-lg);
+}
+
+.card-header {
+    background: linear-gradient(135deg, var(--tienda-primary) 0%, var(--tienda-primary-light) 100%);
+    color: white;
+    font-weight: 600;
+    border-radius: var(--tienda-border-radius-lg) var(--tienda-border-radius-lg) 0 0;
+}
+
+/* ===== PERSONALIZACIÓN DE FORMULARIOS ===== */
+.form-control {
+    border-radius: var(--tienda-border-radius);
+    border: 2px solid rgba(44, 85, 48, 0.2);
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus {
+    border-color: var(--tienda-primary);
+    box-shadow: 0 0 0 0.2rem rgba(44, 85, 48, 0.25);
+}
+
+/* ===== SIDEBAR PERSONALIZADO ===== */
+.sidebar {
+    background: linear-gradient(180deg, #f8f9fa 0%, #e9ecef 100%);
+    border-right: 2px solid var(--tienda-secondary-light);
+}
+
+.sidebar .nav-link {
+    color: var(--tienda-primary-dark);
+    font-weight: 500;
+    border-radius: var(--tienda-border-radius);
+    margin: 2px 8px;
+    transition: all 0.3s ease;
+}
+
+.sidebar .nav-link:hover,
+.sidebar .nav-link.active {
+    background: var(--tienda-primary);
+    color: white;
+    transform: translateX(4px);
+}
+
+/* ===== INDICADORES Y BADGES ===== */
+.indicator-pill,
+.badge-primary {
+    background: var(--tienda-primary);
+    border-radius: var(--tienda-border-radius-xl);
+}
+
+.badge-secondary {
+    background: var(--tienda-secondary);
+    color: var(--tienda-primary-dark);
+}
+
+/* ===== PERSONALIZACIÓN DE TABLAS ===== */
+.table th {
+    background: var(--tienda-primary);
+    color: white;
+    font-weight: 600;
+    border: none;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(44, 85, 48, 0.05);
+}
+
+/* ===== PERSONALIZACIÓN DE MODALES ===== */
+.modal-content {
+    border-radius: var(--tienda-border-radius-lg);
+    border: none;
+    box-shadow: var(--tienda-shadow-lg);
+}
+
+.modal-header {
+    background: var(--tienda-primary);
+    color: white;
+    border-radius: var(--tienda-border-radius-lg) var(--tienda-border-radius-lg) 0 0;
+}
+
+/* ===== EFECTOS Y ANIMACIONES ===== */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ===== TEMA OSCURO (OPCIONAL) ===== */
+[data-theme="dark"] {
+    --tienda-primary: #4a7c59;
+    --tienda-primary-light: #6b9975;
+    --tienda-primary-dark: #2c5530;
+    --tienda-secondary: #e6c299;
+}
