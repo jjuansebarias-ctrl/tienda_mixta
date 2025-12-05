@@ -262,6 +262,13 @@ web_include_css = [
 # 	"tienda_mixta.auth.validate"
 # ]
 
+# Traducciones personalizadas y hooks de sesión
+# --------------------------------
+
+# Hooks para aplicar traducciones automáticamente
+on_session_creation = "tienda_mixta.translations.on_session_creation"
+on_login = "tienda_mixta.translations.on_login"
+
 # Automatically update python controller files with type annotations for this app.
 # export_python_type_annotations = True
 
