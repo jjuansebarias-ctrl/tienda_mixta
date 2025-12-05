@@ -83,14 +83,36 @@ Print Settings,Configuración de Impresión,
 Importing Items and UOMs,Importando Artículos y UdM,
 Processing Items and UOMs,Procesando Artículos y UdM,
 
-# Login y acceso
+# Login y acceso - NUEVAS TRADUCCIONES PARA SOLUCIONAR PROBLEMAS
 Login,Iniciar Sesión,
 Username,Nombre de Usuario,
 Password,Contraseña,
+Email,Correo Electrónico,
+Email Address,Dirección de Correo Electrónico,
 Remember Me,Recordarme,
 Forgot Password,Olvidé la Contraseña,
+Reset Password,Restablecer Contraseña,
 Sign Up,Registrarse,
+Sign up,Registrarse,
 Log out,Cerrar Sesión,
+Create Account,Crear Cuenta,
+"Don't have an account?",¿No tienes una cuenta?,
+"Back to Login",Volver al Inicio de Sesión,
+"Both login and password required",Se requieren tanto usuario como contraseña,
+"Valid email and name required",Se requiere un correo electrónico y nombre válidos,
+"Valid Login id required.",Se requiere un ID de inicio de sesión válido.,
+"Login link sent to your email",Enlace de inicio de sesión enviado a tu correo,
+"Send login link",Enviar enlace de inicio de sesión,
+"Login with {0}",Iniciar sesión con {0},
+"Login with Email Link",Iniciar Sesión con Enlace de Correo,
+"Login with Frappe Cloud",Iniciar Sesión con Frappe Cloud,
+Hide,Ocultar,
+Show,Mostrar,
+"Create a {0} Account",Crear una Cuenta de {0},
+"Signup Disabled",Registro Deshabilitado,
+"Signups have been disabled for this website.",Los registros han sido deshabilitados para este sitio web.,
+"jane@example.com",usuario@ejemplo.com,
+"or",o,
 
 # Navegación y menús
 Home,Inicio,
@@ -148,3 +170,24 @@ Status,Estado,
 Type,Tipo,
 Category,Categoría,
 Group,Grupo,
+
+# Mensajes de JavaScript comunes
+"You need to enable JavaScript for your app to work.",Necesita habilitar JavaScript para que su aplicación funcione.,
+"To enable it follow the instructions in the following link: {0}","Para habilitarlo, siga las instrucciones en el siguiente enlace: {0}",
+
+# Términos de sesión
+Login Required,Inicio de Sesión Requerido,
+login_required,inicio_sesión_requerido,
+"Go to Login Required field",Ir al campo de Inicio de Sesión Requerido,
+"Login is required to see web form list view. Enable {0} to see list settings","Se requiere iniciar sesión para ver la vista de lista del formulario web. Habilite {0} para ver la configuración de la lista",
+
+# Términos de usuario
+User,Usuario,
+Full Name,Nombre Completo,
+"Your login id is",Tu ID de inicio de sesión es,
+"Click on the link below to complete your registration and set a new password",Haz clic en el enlace de abajo para completar tu registro y establecer una nueva contraseña,
+"As per your request, your account and data on {0} associated with email {1} has been permanently deleted","Según su solicitud, su cuenta y datos en {0} asociados con el correo electrónico {1} han sido eliminados permanentemente",
+"Login and view in Browser",Iniciar sesión y ver en el navegador,
+
+# Configuraciones de sitio
+"If you think this is unauthorized, please change the Administrator password.","Si crees que esto no está autorizado, por favor cambia la contraseña del Administrador."

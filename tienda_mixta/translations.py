@@ -1,11 +1,12 @@
 """
 Módulo de traducciones personalizadas para Tienda Mixta La 40
-Corrige traducciones problemáticas del sistema Frappe/ERPNext
+Corrige traducciones problemáticas del sistema Frappe/ERPNext y aplica traducciones faltantes
 """
 
 import frappe
 import csv
 import os
+from frappe import _
 
 def get_translations():
     """
@@ -64,6 +65,34 @@ def load_custom_translations():
     
     return translations
 
+def apply_custom_translations():
+    """
+    Aplica las traducciones personalizadas al sistema actual
+    """
+    translations = get_translations()
+    
+    # Obtener el diccionario de traducciones actual
+    current_lang = frappe.local.lang or 'es'
+    
+    if current_lang == 'es' and translations:
+        # Aplicar nuestras traducciones personalizadas
+        if not hasattr(frappe.local, 'custom_translations'):
+            frappe.local.custom_translations = {}
+        
+        frappe.local.custom_translations.update(translations)
+        
+        # Hook into the translation function
+        original_translate = frappe._
+        
+        def custom_translate(text, lang=None):
+            if lang == 'es' or (not lang and current_lang == 'es'):
+                if hasattr(frappe.local, 'custom_translations') and text in frappe.local.custom_translations:
+                    return frappe.local.custom_translations[text]
+            return original_translate(text, lang)
+        
+        # Replace the original function
+        frappe._ = custom_translate
+
 @frappe.whitelist()
 def reload_translations():
     """
@@ -71,6 +100,7 @@ def reload_translations():
     """
     try:
         translations = load_custom_translations()
+        apply_custom_translations()
         frappe.clear_cache()
         return {
             "success": True,
@@ -83,3 +113,27 @@ def reload_translations():
             "success": False,
             "message": f"Error recargando traducciones: {str(e)}"
         }
+
+def get_custom_translation(text, lang='es'):
+    """
+    Obtiene una traducción personalizada específica
+    """
+    translations = get_translations()
+    if lang == 'es' and text in translations:
+        return translations[text]
+    return None
+
+# Hook para inicializar las traducciones automáticamente
+def on_session_creation(login_manager):
+    """
+    Hook que se ejecuta cuando se crea una sesión
+    """
+    if frappe.local.lang == 'es':
+        apply_custom_translations()
+
+def on_login(login_manager):
+    """
+    Hook que se ejecuta al hacer login
+    """
+    if frappe.local.lang == 'es':
+        apply_custom_translations()
